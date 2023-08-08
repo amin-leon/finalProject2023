@@ -1,10 +1,14 @@
 import React from 'react'
-import Header from '../components/Header'
+import SideNav from '../components/home_user_page/SideNav'
+import MainContent from '../components/home_user_page/MainContent'
 
 function Home() {
   return (
     <div>
-        <Header />
+        <div className="flex">
+          <SideNav name={"NP Leon"} />
+          <MainContent />
+        </div>
     </div>
   )
 }
