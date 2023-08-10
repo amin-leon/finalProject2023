@@ -1,8 +1,15 @@
 import React from 'react';
-import { IoIosAddCircleOutline } from "react-icons/io";
 
+import { CgProfile } from "react-icons/cg";
+import { IoCreateOutline } from "react-icons/io5";
+import { GiProgression} from "react-icons/gi";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+import { TiTimesOutline } from "react-icons/ti";
+import { BiMessageRoundedDots, BiBarChart } from "react-icons/bi";
+import { TbNotification } from "react-icons/tb";
+import { BsPeople } from "react-icons/bs";
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   return (
     <div className="w-[15%] bg-white  h-screen border-r-2 border-slate-200 sticky">
       <div className="flex items-center p-6">
@@ -12,61 +19,60 @@ const Sidebar = (props) => {
           className="w-12 h-12 rounded-full mr-3"
         />
         <div>
-          <h2 className="font-semibold text-lg">{props.name}</h2>
+          <h2 className="font-semibold text-lg">NP Leon</h2>
           <p className="text-sm">Student/Ict</p>
         </div>
       </div>
       <ul className="text-sm">
         <li className="py-4 px-6 text-sky-500 ">
-          DESCOVER
+          ISSUES
            <ol className='py-3'>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Featured</li>
+                <span><IoCreateOutline /></span>
+                <li>New</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Most popular</li>
+                <span><GiProgression /></span>
+                <li>Progress</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Shuffle</li>
+                <span><AiOutlineCheckCircle /></span>
+                <li>Solved</li>
+              </div>
+              <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
+                <span><TiTimesOutline /></span>
+                <li>Rejected</li>
               </div>
              
            </ol>
         </li>
         <li className="py-2 px-6  text-sky-500 transition duration-300 cursor-pointer">
-          TOOLS
+          COMMENTS
           <ol className='py-3 text-black'>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Featured</li>
+                <span><BiMessageRoundedDots /></span>
+                <li>Messages</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Most popular</li>
+                <span><TbNotification /></span>
+                <li>Notifications</li>
               </div>
-              <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Shuffle</li>
-              </div>
-             
            </ol>
         </li>
         <li className="py-2 px-6 text-sky-500 transition duration-300 cursor-pointer">
-          REPORTS & VOTINGS
+          OTHERS..
           <ol className='py-3 text-black'>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Featured</li>
+                <span><BsPeople /></span>
+                <li>Staffs</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Most popular</li>
+                <span><BiBarChart /></span>
+                <li>General</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><IoIosAddCircleOutline /></span>
-                <li>Shuffle</li>
+                <span><CgProfile /></span>
+                <li>Profile</li>
               </div>
              
            </ol>
