@@ -23,8 +23,8 @@ function CreateNewIssue() {
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-blue-300">
-              
+            <TimelineIcon className="p-2 rounded-none bg-blue-300">
+               
             </TimelineIcon>
             <Typography variant="font" color="blue-gray">
               Send Issue
@@ -40,7 +40,7 @@ function CreateNewIssue() {
         <TimelineItem>
           <TimelineConnector />
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-blue-300">
+            <TimelineIcon className="p-2 rounded-none bg-blue-300">
               
             </TimelineIcon>
             <Typography variant="font" color="blue-gray">
@@ -55,7 +55,7 @@ function CreateNewIssue() {
         </TimelineItem>
         <TimelineItem>
           <TimelineHeader>
-            <TimelineIcon className="p-2 bg-blue-300">
+            <TimelineIcon className="p-2 rounded-none bg-blue-300">
               
             </TimelineIcon>
             <Typography variant="font-thin" color="blue-gray">
@@ -72,7 +72,7 @@ function CreateNewIssue() {
       </Timeline>
     </div>
         <div className='grid col-span-2 border-l border-gray-100 pl-[50px]'>
-            <div className='pb-5 flex flex-col space-y-2'>
+            <div className='pb-10 flex flex-col space-y-2'>
                 <label className='font-bold w-96'>Complete this form</label>
                 <p>Choose where you want to for your querry and make sure that choose issue catery very well</p>
             </div>
@@ -108,8 +108,8 @@ function CreateNewIssue() {
                <Textarea label="Additional Comments ....." />
             </div>
             <div className="w-96">
-               <label for="avatar">Attachment</label>
-               <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="small_size">Attachment</label>
+                  <input class="block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="small_size" type="file" />
             </div>
             <div className='flex  gap-4 justify-start pt-5'>
                <div className="flex w-max gap-4">

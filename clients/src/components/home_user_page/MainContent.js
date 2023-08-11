@@ -6,6 +6,7 @@ import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
 import { NoticationBage } from '../utils_material_tailwind/Notification';
 import SearchField from './SearchField';
 import CreateNewIssue from './new_Issue';
+import NewUserRegistration from './new_User';
 
 const MainContent = () => {
   return (
@@ -49,7 +50,10 @@ const MainContent = () => {
         </div>
       </div>
       <div className="">
-        <CreateNewIssue  />
+        {/* issue registrtion form */}
+        {/* <CreateNewIssue  /> */}
+        {/* User registration */}
+        <NewUserRegistration />
       </div>
     </div>
   );

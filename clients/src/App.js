@@ -1,10 +1,12 @@
 import React from 'react';
-import Home from './pages/Home';
+// import Home from './pages/Home';
+import Signup from './pages/Signup';
 
 const App = () => {
   return (
     <div>
-      <Home />
+      {/* <Home /> */}
+      <Signup />
     </div>
   );
 };
