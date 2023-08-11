@@ -51,9 +51,9 @@ const MainContent = () => {
       </div>
       <div className="">
         {/* issue registrtion form */}
-        {/* <CreateNewIssue  /> */}
+        <CreateNewIssue  />
         {/* User registration */}
-        <NewUserRegistration />
+        {/* <NewUserRegistration /> */}
       </div>
     </div>
   );

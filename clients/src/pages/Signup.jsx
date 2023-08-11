@@ -16,7 +16,7 @@ function NewUserRegistration() {
         <div className='main_part'>
         <div class="flex justify-center flex-col items-center h-full">
                
-            <div class="w-full max-w-2xl p-6 rounded  shadow-md">
+            <div class="w-full max-w-4xl p-6 rounded  shadow-md">
               {/* form Header */}
               <div className='flex justify-start items-center gap-2 pb-3'>
                 <p>Profile</p> 
