@@ -5,13 +5,13 @@ import { IoMdPower } from "react-icons/io";
 import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
 import { NoticationBage } from '../utils_material_tailwind/Notification';
 import SearchField from './SearchField';
-import CreateNewIssue from './new_Issue';
-import NewUserRegistration from './new_User';
+// import CreateNewIssue from './new_Issue';
+// import NewUserRegistration from './new_User';
 
 const MainContent = () => {
   return (
-    <div className="w-[85%] p-4">
-      <div className="flex items-center justify-between mb-4 border-b border-slate-100 w-[100%] p-6 ">
+    <div className="w-[100%] md:w-[100%] p-4">
+      <div className="flex items-center justify-between xl:justify-between mb-4 border-b border-slate-100 w-[100%] p-6 ">
         <div className="flex items-center space-x-4">
           <SearchField />
         </div>
@@ -19,16 +19,14 @@ const MainContent = () => {
         <div className="flex flex-row space-x-3 justify-end h-10 items-center">
                    <div>
                    <span className="text-2xl space-x-4 relative"> <NoticationBage /></span>
-
                    </div>
-                    <span className="text-2xl pr-5"><IoMdPower/></span>
                 </div>
       </div>
       {/* top 2 nav bar */}
-      <p> DASHBOARD</p>
+      <p className='hidden xl:block'> DASHBOARD</p>
       <div className='flex justify-between items-center p-6 border-b border-slate-100'>
         
-        <div>
+        <div className='hidden xl:block'>
           <ul className='flex flex-row space-x-4'>
             <li className='flex justify-center items-center space-x-2'><span><AiOutlineFolderOpen /></span><span>Open</span></li>
             <li className='flex justify-center items-center space-x-2'><span><GoIssueDraft /></span><span>Proress</span></li>
@@ -51,7 +49,7 @@ const MainContent = () => {
       </div>
       <div className="">
         {/* issue registrtion form */}
-        <CreateNewIssue  />
+        {/* <CreateNewIssue  /> */}
         {/* User registration */}
         {/* <NewUserRegistration /> */}
       </div>

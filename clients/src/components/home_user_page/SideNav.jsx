@@ -11,7 +11,7 @@ import { BsPeople } from "react-icons/bs";
 
 const Sidebar = () => {
   return (
-    <div className="w-[15%] bg-white  h-screen border-r-2 border-slate-200 sticky">
+    <div className="hidden xl:block w-[15%] bg-white  h-screen border-r-2 border-slate-200 ">
       <div className="flex items-center p-6">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8m6MLoHjjQ_HjGP5l_VoAsPJzFBgpRiHTsb8BZFevRib1jqQHUC8NPodHqnD7di9N5rk&usqp=CAU"
