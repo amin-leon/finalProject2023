@@ -17,8 +17,8 @@ import {
 
 function CreateNewIssue() {
   return (
-    <div className=' grid grid-cols-3 gap-5 mt-10'>
-    <div className=" mx-auto">
+    <div className=' grid-cols-1 grid xl:grid-cols-3 gap-5 mt-10'>
+    <div className="pb-4 xl:mx-auto">
       <Timeline>
         <TimelineItem>
           <TimelineConnector />

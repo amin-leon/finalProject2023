@@ -6,9 +6,13 @@ import MainContent from '../components/home_user_page/MainContent'
 function Home() {
   return (
     <div>
-        <div className="flex">
+        <div className="flex relative ">
+          <div className='basis-[15%]'>
           <SideNav />
+          </div>
+          <div className='basis-[85%]'>
           <MainContent />
+          </div>
         </div>
     </div>
   )

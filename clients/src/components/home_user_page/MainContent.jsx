@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import {  AiOutlineMenuUnfold, AiOutlineDownload, AiOutlineFolderAdd, AiOutlineFolderOpen} from "react-icons/ai";
-import { IoMdPower } from "react-icons/io";
+import {  AiOutlineMenuUnfold, AiOutlineDownload, AiOutlineFolderAdd, AiOutlineFolderOpen, AiOutlineMenu} from "react-icons/ai";
 import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
 import { NoticationBage } from '../utils_material_tailwind/Notification';
 import SearchField from './SearchField';
-// import CreateNewIssue from './new_Issue';
+import CreateNewIssue from './new_Issue';
 // import NewUserRegistration from './new_User';
 
 const MainContent = () => {
@@ -16,11 +15,16 @@ const MainContent = () => {
           <SearchField />
         </div>
         {/* Other content for the top bar */}
-        <div className="flex flex-row space-x-3 justify-end h-10 items-center">
+        <div className="hidden xl:flex flex-row space-x-3 justify-end h-10 items-center">
                    <div>
                    <span className="text-2xl space-x-4 relative"> <NoticationBage /></span>
                    </div>
-                </div>
+          </div>
+          <div className=" flex flex-row space-x-3 justify-end h-10 items-center xl:hidden">
+                   <div>
+                   <button className="text-2xl space-x-4 relative"> <AiOutlineMenu /></button>
+                   </div>
+          </div>
       </div>
       {/* top 2 nav bar */}
       <p className='hidden xl:block'> DASHBOARD</p>
@@ -49,7 +53,7 @@ const MainContent = () => {
       </div>
       <div className="">
         {/* issue registrtion form */}
-        {/* <CreateNewIssue  /> */}
+        <CreateNewIssue  />
         {/* User registration */}
         {/* <NewUserRegistration /> */}
       </div>
