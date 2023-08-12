@@ -1,32 +1,77 @@
 import React from 'react';
 import { FaLock, FaFacebook, FaGoogle } from 'react-icons/fa';
 
+
+import { useForm } from 'react-hook-form'
+import { object, string } from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
 const LoginPage = () => {
+  const schema = object().shape({
+
+    username: string()
+              .required('Username is required')
+              .min(3, 'Username must be at least 3 characters')
+              .max(20, 'Username cannot exceed 20 characters')
+              .matches(
+                /^[a-zA-Z0-9_-]+$/, // Only letters, digits, underscore, and hyphen are allowed
+                'Username can only contain letters, digits, underscore, and hyphen'
+              ),
+  password: string()
+              .required('Password is required')
+              .min(8, 'Password must be at least 8 characters')
+              .matches(
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
+                'Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character'
+              ),
+ 
+});
+
+const {
+  register,
+  handleSubmit,
+  formState: { errors },
+} = useForm({
+  resolver: yupResolver(schema),
+})
+
+
+// Form submission handler
+const onSubmit = (data) => {
+  // Do something with the form data
+  console.log(data)
+}
+
+
   return (
-    <div className="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80')" }}>
+    <div className="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center bg-blue-gray-50" style={{ backgroundImage: "url('')" }}>
       <div className="overlay w-4/5 md:w-2/3 p-8 bg-white bg-opacity-70 rounded-lg shadow-lg flex">
         {/* Left Section - Login Form */}
         <div className="w-1/2 pr-8 flex flex-col justify-center items-center">
-          <div className="text-center mb-8">
-            <span className="text-5xl text-gray-800">
-              <FaLock />
-            </span>
+          <div className="text-center  mb-8">
+            <img src='https://cdn-icons-png.flaticon.com/512/6681/6681204.png' alt='loginPicture' className='w-[100px]' />
           </div>
-          <form className="w-full">
+          <form onSubmit={handleSubmit(onSubmit)} className='w-full'>
             <div className="mb-6">
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-600">Email</label>
-              <input type="email" id="email" name="email" className="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none" />
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-600">Username</label>
+              <input type="text" {...register('username')} id="username" name="username" className="w-full focus: outline-none px-4 py-3 border rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none" />
+              {errors.username && (
+              <p className="text-xs italic text-red-500">{errors.username.message}</p>
+            )}
             </div>
             <div className="mb-4">
               <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-600">Password</label>
-              <input type="password" id="password" name="password" className="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none" />
+              <input type="password" {...register('password') } id="password" name="password" className="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none" />
+              {errors.password && (
+              <p className="text-xs italic text-red-500">{errors.password.message}</p>
+            )}
             </div>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
                 <input type="checkbox" id="remember" className="mr-2 focus:ring focus:ring-indigo-300" />
                 <label htmlFor="remember" className="text-sm text-gray-600">Keep me signed in</label>
               </div>
-              <a href="#" className="text-sm text-indigo-500 hover:underline">Forgot Password?</a>
+              <a href="leon.com" className="text-sm text-indigo-500 hover:underline">Forgot Password?</a>
             </div>
             <button type="submit" className="w-full px-6 py-3 text-white bg-indigo-500 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300">Login</button>
           </form>
@@ -44,13 +89,7 @@ const LoginPage = () => {
         </div>
         {/* Right Section - SVG Illustration for Login */}
         <div className="w-1/2 bg-gray-100 p-4 rounded-lg flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12" y2="8"></line>
-            <line x1="16" y1="12" x2="12" y2="12"></line>
-            <line x1="8" y1="12" x2="8" y2="16"></line>
-          </svg>
+          <img src='https://www.shutterstock.com/shutterstock/photos/1751135810/display_1500/stock-vector-working-at-home-vector-flat-style-illustration-online-career-coworking-space-illustration-young-1751135810.jpg' alt=''/>
         </div>
       </div>
     </div>

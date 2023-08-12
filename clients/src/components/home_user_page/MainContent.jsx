@@ -4,8 +4,8 @@ import {  AiOutlineMenuUnfold, AiOutlineDownload, AiOutlineFolderAdd, AiOutlineF
 import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
 import { NoticationBage } from '../utils_material_tailwind/Notification';
 import SearchField from './SearchField';
-import CreateNewIssue from './new_Issue';
-// import NewUserRegistration from './new_User';
+// import IssueCreationForm from './new_Issue';
+import NewUserRegistration from './new_User';
 
 const MainContent = () => {
   return (
@@ -53,9 +53,9 @@ const MainContent = () => {
       </div>
       <div className="">
         {/* issue registrtion form */}
-        <CreateNewIssue  />
+        {/* <IssueCreationForm  /> */}
         {/* User registration */}
-        {/* <NewUserRegistration /> */}
+        <NewUserRegistration />
       </div>
     </div>
   );
