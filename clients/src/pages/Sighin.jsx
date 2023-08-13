@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLock, FaFacebook, FaGoogle } from 'react-icons/fa';
+import { FaFacebook, FaGoogle } from 'react-icons/fa';
 
 
 import { useForm } from 'react-hook-form'

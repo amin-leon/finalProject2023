@@ -1,16 +1,17 @@
 import React from 'react';
-import Home from './pages/Home';
-// import Signup from './pages/Signup';
-import LoginPage from './pages/Sighin';
+import DashboardLayout from './components/Admin/DashboardLayout';
+
 
 const App = () => {
   return (
     <div>
       {/* <Home /> */}
       {/* <Signup /> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <DashboardLayout />
     </div>
   );
 };
 
 export default App;
+
