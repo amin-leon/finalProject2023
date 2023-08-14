@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FiHome, FiUsers, FiFilePlus, FiSettings } from 'react-icons/fi';
 import Stuff from '../../pages/stuff/Stuff';
 
+
+
 const DashboardLayout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -36,7 +38,7 @@ const DashboardLayout = () => {
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } md:block w-1/6  p-4 bg-transparent md:flex md:flex-col  md:h-screen items-center`}
+        }  w-1/6  p-4 bg-transparent md:flex md:flex-col  md:h-screen items-center`}
       >
         <div className='flex flex-row items-center gap-5 pb-10'>
             <img  className ="w-[40px] h-[40px] rounded-full" src='https://th.bing.com/th/id/R.3832db45d6f86a7e4acf2e351816f535?rik=R1mf8OI%2fhsToWg&riu=http%3a%2f%2fwww.weirdlyodd.com%2fwp-content%2fuploads%2f2011%2f02%2fPakistan-Flag.jpg&ehk=PeUdQrfA0wNxEYnuzUwUq2pzqxLOnwoyOyDn9nOw%2fDk%3d&risl=&pid=ImgRaw&r=0'alt='Avatar' />

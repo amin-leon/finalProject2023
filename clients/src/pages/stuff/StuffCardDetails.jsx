@@ -6,7 +6,10 @@ import { GrAttachment } from "react-icons/gr";
 import { Button } from "@material-tailwind/react";
 import { CommentBoxTextarea } from './PostComment';
 
-function StuffCardDetails() {
+function StuffCardDetails( {Users} ) {
+    if (!Users) {
+        return <p className='flex justify-center items-center my-auto '>Select a user to see details .................</p>;
+      }
   return (
     <div>
         <div className='topIcons flex justify-between items-center border-b border-gray-300 pb-3'>
@@ -24,22 +27,17 @@ function StuffCardDetails() {
         {/* body part */}
         <div>
             <div className='flex gap-4 p-5' >
-            <img className=' rounded-full w-[50px] h-[40px]' src='https://i.pinimg.com/736x/e0/6a/57/e06a5707a7e215ff44a7b928d87d42e1.jpg' alt='avatr' />
+            <img className=' rounded-full w-[50px] h-[40px]' src={Users.profileImage} alt='avatr' />
             <div>
-                <p>NP Leon</p>
-                <p className='text-xs'>Student</p>
-                <p className='text-xs font-thin'>leonndayishimiye10@gmail.com</p>
-                <div className='pt-7 pb-5 text-sm'>Today 19:09 P.m</div>
+                <p>{Users.fullName}</p>
+                <p className='text-xs'>{Users.role}</p>
+                <p className='text-xs font-thin'>{Users.email}</p>
+                <div className='pt-7 pb-5 text-sm'>{Users.time}</div>
                 <div>
                     <p className='font-bold italic'>"Class window has broken",</p>
                     <div className='mt-2'>
                         <p className='text-sm'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                         when an unknown printer took a galley of type and scrambled it to make a type 
-                         specimen book. It has survived not only five centuries, 
-                        but also the leap into electronic typesetting, remaining essentially unchanged. 
-                        It was popularised i
+                        {Users.desc}
                         </p>
                     </div>
                 </div>
