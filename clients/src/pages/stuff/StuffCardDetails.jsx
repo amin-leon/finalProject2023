@@ -4,15 +4,13 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import { GrAttachment } from "react-icons/gr";
 import { Button } from "@material-tailwind/react";
-import { Input } from "@material-tailwind/react";
-import { PiTelegramLogoLight } from "react-icons/pi";
 import { CommentBoxTextarea } from './PostComment';
 
 function StuffCardDetails() {
   return (
     <div>
         <div className='topIcons flex justify-between items-center border-b border-gray-300 pb-3'>
-            <div className='flex gap-3 text-xl cursor-pointe'>
+            <div className='flex gap-3 text-xl cursor-pointer'>
                 <RiArrowGoBackFill />
                 <RiArrowGoForwardFill />
                 <AiOutlineDelete  />
@@ -26,16 +24,16 @@ function StuffCardDetails() {
         {/* body part */}
         <div>
             <div className='flex gap-4 p-5' >
-            <img className=' rounded-full w-[50px] h-[40px]' src='https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg' alt='avatr' />
+            <img className=' rounded-full w-[50px] h-[40px]' src='https://i.pinimg.com/736x/e0/6a/57/e06a5707a7e215ff44a7b928d87d42e1.jpg' alt='avatr' />
             <div>
                 <p>NP Leon</p>
-                <p>Student</p>
-                <p>leonndayishimiye10@gmail.com</p>
-                <div className='pt-7 pb-5'>Today 19:09 P.m</div>
+                <p className='text-xs'>Student</p>
+                <p className='text-xs font-thin'>leonndayishimiye10@gmail.com</p>
+                <div className='pt-7 pb-5 text-sm'>Today 19:09 P.m</div>
                 <div>
-                    <p>Hello NP Leon,</p>
+                    <p className='font-bold italic'>"Class window has broken",</p>
                     <div className='mt-2'>
-                        <p>
+                        <p className='text-sm'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                          when an unknown printer took a galley of type and scrambled it to make a type 
@@ -50,7 +48,6 @@ function StuffCardDetails() {
                     <span>Attachments</span>
                 </div>
                 <div className='pt-5 flex gap-4'>
-                    <img  className="w-[100px] h-[100px]" src='https://www.computerhope.com/jargon/d/doc.png' alt='attachment' />
                     <img  className="w-[100px] h-[100px]" src='https://www.computerhope.com/jargon/d/doc.png' alt='attachment' />
                     <img  className="w-[100px] h-[100px]" src='https://media.istockphoto.com/id/1153672822/vector/contract-papers-document-folder-with-stamp-and-text-stack-of-agreements-document-with.jpg?s=612x612&w=0&k=20&c=kjNCXISJ69chBylPnz_pY_jDPlyus3qxB38soxW78J8=' alt='attachment' />
 

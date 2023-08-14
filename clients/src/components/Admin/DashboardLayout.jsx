@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiHome, FiUsers, FiFilePlus, FiSettings, FiMessageSquare, FiHelpCircle } from 'react-icons/fi';
+import { FiHome, FiUsers, FiFilePlus, FiSettings } from 'react-icons/fi';
 import Stuff from '../../pages/stuff/Stuff';
 
 const DashboardLayout = () => {
@@ -12,42 +12,53 @@ const DashboardLayout = () => {
   const SidebarMenuItem = ({ icon, label }) => {
     return (
       <div className="flex items-center py-2">
-        <div className="text-gray-400 w-6">
+        <div className="text-gray-400 w-6 cursor-pointer">
           {icon}
         </div>
-        <span className="text-white ml-2">{label}</span>
+        <span  className="ml-2 cursor-pointer">{label}</span>
       </div>
     );
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen">
       {/* Hamburger Menu (for small screens) */}
       <div className="w-16 bg-blue-500 p-4 text-white md:hidden">
-        <button onClick={toggleMenu} className="text-white">
+        <button onClick={toggleMenu} className="">
           ☰
         </button>
+        <div className='pt-5'>
+           <FiHome />
+        </div>
       </div>
 
       {/* Side Navigation */}
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } md:block w-1/6  p-4 text-white bg-blue-400 md:flex md:flex-col  md:h-screen items-center`}
+        } md:block w-1/6  p-4 bg-transparent md:flex md:flex-col  md:h-screen items-center`}
       >
         <div className='flex flex-row items-center gap-5 pb-10'>
-            <img  className ="w-[40px] h-[40px] rounded-full" src='https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg'alt='Avatar' />
+            <img  className ="w-[40px] h-[40px] rounded-full" src='https://th.bing.com/th/id/R.3832db45d6f86a7e4acf2e351816f535?rik=R1mf8OI%2fhsToWg&riu=http%3a%2f%2fwww.weirdlyodd.com%2fwp-content%2fuploads%2f2011%2f02%2fPakistan-Flag.jpg&ehk=PeUdQrfA0wNxEYnuzUwUq2pzqxLOnwoyOyDn9nOw%2fDk%3d&risl=&pid=ImgRaw&r=0'alt='Avatar' />
             <div>
               <p>NP Leon</p>
               <p className='text-xs'> Admin</p>
             </div>
         </div>
+        <div className='pb-5'>
+        <SidebarMenuItem icon={<FiUsers />} label="Users"/>
+        <SidebarMenuItem icon={<FiFilePlus />} label="Add Issue" />
+        <SidebarMenuItem icon={<FiSettings />} label="Settings" />
+
+        </div>
+        <div>
+          <p>Others..</p>
+        <div className='pb-3'>
         <SidebarMenuItem icon={<FiHome />} label="Dashboard" />
         <SidebarMenuItem icon={<FiUsers />} label="Users" />
         <SidebarMenuItem icon={<FiFilePlus />} label="Add Issue" />
-        <SidebarMenuItem icon={<FiSettings />} label="Settings" />
-        <SidebarMenuItem icon={<FiMessageSquare />} label="Messages" />
-        <SidebarMenuItem icon={<FiHelpCircle />} label="Help" />
+        </div>
+        </div>
       </nav>
 
       <div className="flex-1 flex flex-col overflow-hidden">
