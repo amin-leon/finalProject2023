@@ -15,7 +15,7 @@ const StuffCard = ( {Users, onClick })=> {
                                 <p className='font-bold'>{Users.fullName}</p>
                                 <p className='text-xs italic'>{Users.role}</p>
                             </div>
-                            <div className='text-sm'>{Users.time}</div>
+                            <div className='text-sm'>{Users.createdAt}</div>
                         </div>
                         <div className='flex flex-col gap-2'>
                             <p className='text-sm'>{Users.desc}</p>

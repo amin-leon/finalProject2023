@@ -49,16 +49,17 @@ const DashboardLayout = () => {
         </div>
         <div className='pb-5'>
         <SidebarMenuItem icon={<FiUsers />} label="Users"/>
-        <SidebarMenuItem icon={<FiFilePlus />} label="Add Issue" />
-        <SidebarMenuItem icon={<FiSettings />} label="Settings" />
+        <SidebarMenuItem icon={<FiFilePlus />} label="Pending" />
+        <SidebarMenuItem icon={<FiSettings />} label="Querries" />
 
         </div>
         <div>
           <p>Others..</p>
         <div className='pb-3'>
-        <SidebarMenuItem icon={<FiHome />} label="Dashboard" />
-        <SidebarMenuItem icon={<FiUsers />} label="Users" />
-        <SidebarMenuItem icon={<FiFilePlus />} label="Add Issue" />
+        <SidebarMenuItem icon={<FiHome />} label="Groups" />
+        <SidebarMenuItem icon={<FiUsers />} label="Stuffs" />
+        <SidebarMenuItem icon={<FiUsers />} label="Report" />
+        <SidebarMenuItem icon={<FiFilePlus />} label="Settings" />
         </div>
         </div>
       </nav>

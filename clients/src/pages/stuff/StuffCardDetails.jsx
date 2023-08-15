@@ -1,22 +1,23 @@
 import React from 'react'
-import { RiArrowGoBackFill , RiArrowGoForwardFill} from "react-icons/ri";
+import {  RiArrowGoForwardFill} from "react-icons/ri";
 import { AiOutlineDelete } from "react-icons/ai";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import { GrAttachment } from "react-icons/gr";
 import { Button } from "@material-tailwind/react";
 import { CommentBoxTextarea } from './PostComment';
+import MessageDialog from '../../components/Admin/Dispatch'
 
 function StuffCardDetails( {Users} ) {
     if (!Users) {
-        return <p className='flex justify-center items-center my-auto '>Select a user to see details .................</p>;
+        return <p className='flex justify-center items-center my-auto '>Select a user to see details.................</p>;
       }
   return (
     <div>
         <div className='topIcons flex justify-between items-center border-b border-gray-300 pb-3'>
             <div className='flex gap-3 text-xl cursor-pointer'>
-                <RiArrowGoBackFill />
+               
                 <RiArrowGoForwardFill />
-                <AiOutlineDelete  />
+                <MessageDialog  />
             </div>
             <div className='flex justify-center items-center cursor-pointer gap-3'>
                 <span>1/180</span>
@@ -32,7 +33,7 @@ function StuffCardDetails( {Users} ) {
                 <p>{Users.fullName}</p>
                 <p className='text-xs'>{Users.role}</p>
                 <p className='text-xs font-thin'>{Users.email}</p>
-                <div className='pt-7 pb-5 text-sm'>{Users.time}</div>
+                <div className='pt-7 pb-5 text-sm'>{Users.createdAt}</div>
                 <div>
                     <p className='font-bold italic'>"Class window has broken",</p>
                     <div className='mt-2'>

@@ -2,7 +2,7 @@ const User = [
     {
       "_id": "user1",
       "fullName": "John Doe",
-      "desc":"Definition: A profile picture is the image that represents a social media account in all its interactions across a platform",
+      "desc":"Definition: A profile picture is the image that represents",
       "email": "john@example.com",
       "password": "$2a$10$H3tH7Y/IdJ/n6t2FVBrdwOS0wFTaUbK2LhC6ZK4FwSw1mBGFwLZnG",
       "role": "leader",
@@ -15,14 +15,14 @@ const User = [
         "email": true,
         "inApp": true
       },
-      "createdAt": "2023-07-01T12:00:00Z",
-      "updatedAt": "2023-07-10T08:30:00Z"
+      "createdAt": "Today 12:00 a.m",
+      "updatedAt": "Yestarday p.m"
     },
     {
       "_id": "user2",
       "fullName": "Jane Smith",
       "time":"Yestarday 9:30 A.m",
-      "desc":"defines who you are and how you want to be seen by others. This applies not only to your profile photoo",
+      "desc":"defines who you are and how you want to be seen by others.",
       "email": "jane@example.com",
       "password": "$2a$10$XK1hblI44Ql6CrGhxZT13u2ez/1DkJwx7N6PDvlHJLlh.bjGW3L1K",
       "role": "student",
@@ -34,8 +34,8 @@ const User = [
         "email": true,
         "inApp": true
       },
-      "createdAt": "2023-07-05T10:00:00Z",
-      "updatedAt": "2023-07-15T14:45:00Z"
+      "createdAt": "Today 10:00:00Z A.m",
+      "updatedAt": "Yestarday 14:45 P.m"
     }
   ]
   
