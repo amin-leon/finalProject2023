@@ -1,6 +1,4 @@
 import React from 'react'
-import {  RiArrowGoForwardFill} from "react-icons/ri";
-import { AiOutlineDelete } from "react-icons/ai";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import { GrAttachment } from "react-icons/gr";
 import { Button } from "@material-tailwind/react";
@@ -16,7 +14,6 @@ function StuffCardDetails( {Users} ) {
         <div className='topIcons flex justify-between items-center border-b border-gray-300 pb-3'>
             <div className='flex gap-3 text-xl cursor-pointer'>
                
-                <RiArrowGoForwardFill />
                 <MessageDialog  />
             </div>
             <div className='flex justify-center items-center cursor-pointer gap-3'>

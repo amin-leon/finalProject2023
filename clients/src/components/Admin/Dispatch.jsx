@@ -14,6 +14,7 @@ import {
    Option,
   Textarea,
 } from "@material-tailwind/react";
+import { TiArrowForward } from "react-icons/ti";
  
  const MessageDialog=()=> {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,8 @@ import {
  
   return (
     <>
-       <RiArrowGoForwardFill onClick={handleOpen}/>
+       <TiArrowForward onClick={handleOpen} className="text-4xl"/> 
+
       <Dialog open={open} handler={handleOpen}>
         <div className="flex items-center justify-between">
           <DialogHeader>Assign Issue to</DialogHeader>
@@ -42,7 +44,12 @@ import {
         </div>
         <DialogBody divider>
           <div className="grid gap-6">
-            <input type="text " placeholder="Select staff" />
+          <Select variant="standard" label="Select Stuff">
+            <Option>Admin</Option>
+            <Option>Ci</Option>
+            <Option> Io</Option>
+            <Option> Roistics</Option>
+        </Select>
             <Textarea label="Your comment" />
           </div>
         </DialogBody>
@@ -51,7 +58,7 @@ import {
             close
           </Button>
           <Button variant="gradient" color="blue" onClick={handleOpen}>
-            Assign
+            assign
           </Button>
         </DialogFooter>
       </Dialog>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiHome, FiUsers, FiFilePlus, FiSettings } from 'react-icons/fi';
-import Stuff from '../../pages/stuff/Stuff';
+import IssuePage from '../../pages/stuff/IssuesPage';
+// import Stuff from '../../pages/stuff/Stuff';
 
 
 
@@ -79,7 +80,8 @@ const DashboardLayout = () => {
 
         {/* Main Content */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-white p-4">
-            <Stuff />
+            {/* <Stuff /> */}
+            <IssuePage />
         </main>
       </div>
       
