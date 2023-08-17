@@ -21,8 +21,7 @@ function IssueCard() {
                 <IssueCardContent />
                 <IssueCardContent />
                 <IssueCardContent />
-                <IssueCardContent />
-                <IssueCardContent />
+                
         </div>
 
     </div>

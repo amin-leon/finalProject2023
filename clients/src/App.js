@@ -1,5 +1,7 @@
 import React from 'react';
 import DashboardLayout from './components/Admin/DashboardLayout';
+// import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 const App = () => {
@@ -8,7 +10,9 @@ const App = () => {
       {/* <Home /> */}
       {/* <Signup /> */}
       {/* <LoginPage /> */}
-      <DashboardLayout />
+      {/* <DashboardLayout /> */}
+      {/* <Login /> */}
+      <Register />
     </div>
   );
 };

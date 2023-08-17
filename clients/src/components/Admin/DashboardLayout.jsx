@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { FiHome, FiUsers, FiFilePlus, FiSettings } from 'react-icons/fi';
 import IssuePage from '../../pages/stuff/IssuesPage';
 // import Stuff from '../../pages/stuff/Stuff';
+import { NewIssueNotifications } from '../../components/Admin/NewIssueNotification'
+import { ComplexNavbar } from './test/avatarMenu';
+// import Register from '../../pages/Register'
+import Login from '../../pages/Login'
 
 
 
@@ -14,7 +18,7 @@ const DashboardLayout = () => {
 
   const SidebarMenuItem = ({ icon, label }) => {
     return (
-      <div className="flex items-center py-2">
+      <div className="flex items-center py-2  hover:bg-black hover:text-white w-[200px]">
         <div className="text-gray-400 w-6 cursor-pointer">
           {icon}
         </div>
@@ -42,14 +46,14 @@ const DashboardLayout = () => {
         }  w-1/6  p-4 bg-transparent md:flex md:flex-col  md:h-screen items-center`}
       >
         <div className='flex flex-row items-center gap-5 pb-10'>
-            <img  className ="w-[40px] h-[40px] rounded-full" src='https://th.bing.com/th/id/R.3832db45d6f86a7e4acf2e351816f535?rik=R1mf8OI%2fhsToWg&riu=http%3a%2f%2fwww.weirdlyodd.com%2fwp-content%2fuploads%2f2011%2f02%2fPakistan-Flag.jpg&ehk=PeUdQrfA0wNxEYnuzUwUq2pzqxLOnwoyOyDn9nOw%2fDk%3d&risl=&pid=ImgRaw&r=0'alt='Avatar' />
+            <img  className ="w-[40px] h-[40px] rounded-full" src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'alt='Avatar' />
             <div>
               <p>NP Leon</p>
               <p className='text-xs'> Admin</p>
             </div>
         </div>
         <div className='pb-5'>
-        <SidebarMenuItem icon={<FiUsers />} label="Users"/>
+        <SidebarMenuItem icon={<FiUsers />} label="Users" />
         <SidebarMenuItem icon={<FiFilePlus />} label="Pending" />
         <SidebarMenuItem icon={<FiSettings />} label="Querries" />
 
@@ -70,20 +74,23 @@ const DashboardLayout = () => {
         <header className="bg-white border-b p-4 shadow-md">
           <div className="flex items-center justify-end">
             {/* Avatar Image */}
-            <img
-              src="https://via.placeholder.com/40"
-              alt="User Avatar"
-              className="w-8 h-8 rounded-full"
-            />
+            <div className='flex justify-end items-center  text-blue-500 pb-2'>
+            <NewIssueNotifications />
+            </div>
+           
+           <ComplexNavbar />
           </div>
+
         </header>
 
         {/* Main Content */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-white p-4">
             {/* <Stuff /> */}
-            <IssuePage />
+            {/* <IssuePage /> */}
+            <Login />
         </main>
       </div>
+      
       
     </div>
   );
