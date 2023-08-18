@@ -8,6 +8,7 @@ import { TiTimesOutline } from "react-icons/ti";
 import { BiMessageRoundedDots, BiBarChart } from "react-icons/bi";
 import { TbNotification } from "react-icons/tb";
 import { BsPeople } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -29,7 +30,9 @@ const Sidebar = () => {
            <ol className='py-3'>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><IoCreateOutline /></span>
-                <li>New</li>
+                <Link to="new-issue">
+                  <li>New</li>
+                </Link>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><GiProgression /></span>

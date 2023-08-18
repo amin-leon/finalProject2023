@@ -1,6 +1,7 @@
 import React from 'react'
 import SideNav from '../components/home_user_page/SideNav'
-import MainContent from '../components/home_user_page/MainContent'
+import { Outlet } from 'react-router-dom'
+import TopMainContent from '../components/home_user_page/TopMainContent'
 
 
 function Home() {
@@ -11,7 +12,8 @@ function Home() {
           <SideNav />
           </div>
           <div className='relative basis-[85%]'>
-          <MainContent />
+           <TopMainContent />
+          <Outlet />
           </div>
         </div>
     </div>
