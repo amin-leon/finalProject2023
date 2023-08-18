@@ -1,18 +1,13 @@
 import React from 'react';
-import DashboardLayout from './components/Admin/DashboardLayout';
-// import Login from './pages/Login';
-import Register from './pages/Register';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './pages/Login'
 
 
 const App = () => {
   return (
     <div>
-      {/* <Home /> */}
-      {/* <Signup /> */}
-      {/* <LoginPage /> */}
-      {/* <DashboardLayout /> */}
-      {/* <Login /> */}
-      <Register />
+      <Login />
+      
     </div>
   );
 };

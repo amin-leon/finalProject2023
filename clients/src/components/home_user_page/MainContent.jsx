@@ -2,22 +2,22 @@
 import React from 'react';
 import {  AiOutlineMenuUnfold, AiOutlineDownload, AiOutlineFolderAdd, AiOutlineFolderOpen, AiOutlineMenu} from "react-icons/ai";
 import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
-import { NoticationBage } from '../utils_material_tailwind/Notification';
 import SearchField from './SearchField';
 // import IssueCreationForm from './new_Issue';
-import NewUserRegistration from './new_User';
+import NewUserRegistration from './NewUserRegistration';
+import { NewIssueNotifications } from '../Admin/NewIssueNotification';
 
 const MainContent = () => {
   return (
     <div className="w-[100%] md:w-[100%] p-4">
-      <div className="flex items-center justify-between xl:justify-between mb-4 border-b border-slate-100 w-[100%] p-6 ">
+      <div className="flex items-center justify-between xl:justify-between mb-4 border-b relative border-slate-100 w-[100%] p-6 ">
         <div className="flex items-center space-x-4">
           <SearchField />
         </div>
         {/* Other content for the top bar */}
         <div className="hidden xl:flex flex-row space-x-3 justify-end h-10 items-center">
                    <div>
-                   <span className="text-2xl space-x-4 relative"> <NoticationBage /></span>
+                   <span className="text-2xl space-x-4 relative"> <NewIssueNotifications /></span>
                    </div>
           </div>
           <div className=" flex flex-row space-x-3 justify-end h-10 items-center xl:hidden">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiHome, FiUsers, FiFilePlus, FiSettings } from 'react-icons/fi';
-import IssuePage from '../../pages/stuff/IssuesPage';
+// import IssuePage from '../../pages/stuff/IssuesPage';
 // import Stuff from '../../pages/stuff/Stuff';
 import { NewIssueNotifications } from '../../components/Admin/NewIssueNotification'
 import { ComplexNavbar } from './test/avatarMenu';

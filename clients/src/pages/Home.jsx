@@ -10,7 +10,7 @@ function Home() {
           <div className='basis-[15%]'>
           <SideNav />
           </div>
-          <div className='basis-[85%]'>
+          <div className='relative basis-[85%]'>
           <MainContent />
           </div>
         </div>

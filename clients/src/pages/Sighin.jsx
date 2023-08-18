@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form'
 import { object, string } from 'yup'
@@ -71,7 +71,9 @@ const onSubmit = (data) => {
                 <input type="checkbox" id="remember" className="mr-2 focus:ring focus:ring-indigo-300" />
                 <label htmlFor="remember" className="text-sm text-gray-600">Keep me signed in</label>
               </div>
-              <a href="leon.com" className="text-sm text-indigo-500 hover:underline">Forgot Password?</a>
+              <Link to="/newUser">
+                <a href="leon.com" className="text-sm text-indigo-500 hover:underline">Don't you have account? Sign Up</a>
+              </Link>
             </div>
             <button type="submit" className="w-full px-6 py-3 text-white bg-indigo-500 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-300">Login</button>
           </form>
