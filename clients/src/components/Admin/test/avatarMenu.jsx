@@ -103,7 +103,7 @@ function ProfileMenu() {
 }
 
  
-export function ComplexNavbar() {
+export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
  
  

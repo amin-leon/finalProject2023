@@ -4,6 +4,7 @@ import {  AiOutlineMenuUnfold, AiOutlineDownload, AiOutlineFolderAdd, AiOutlineF
 import { GoIssueClosed , GoIssueDraft} from "react-icons/go";
 import SearchField from './SearchField';
 import { NewIssueNotifications } from '../Admin/NewIssueNotification';
+import ComplexNavbar from '../Admin/test/avatarMenu';
 
 
 const TopMainContent = () => {
@@ -18,6 +19,7 @@ const TopMainContent = () => {
                    <div>
                    <span className="text-2xl space-x-4 relative"> <NewIssueNotifications /></span>
                    </div>
+                   <ComplexNavbar />
           </div>
           <div className=" flex flex-row space-x-3 justify-end h-10 items-center xl:hidden">
                    <div>

@@ -8,7 +8,7 @@ import { TiTimesOutline } from "react-icons/ti";
 import { BiMessageRoundedDots, BiBarChart } from "react-icons/bi";
 import { TbNotification } from "react-icons/tb";
 import { BsPeople } from "react-icons/bs";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -30,21 +30,27 @@ const Sidebar = () => {
            <ol className='py-3'>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><IoCreateOutline /></span>
-                <Link to="new-issue">
+                <NavLink to="new-issue">
                   <li>New</li>
-                </Link>
+                </NavLink>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><GiProgression /></span>
-                <li>Progress</li>
+                <NavLink to="progress-issues" activeClassName="active-link">
+                  <li>Progess</li>
+                </NavLink>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><AiOutlineCheckCircle /></span>
+                <NavLink to="solved-issues">
                 <li>Solved</li>
+                </NavLink>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><TiTimesOutline /></span>
-                <li>Rejected</li>
+                <NavLink to="rejected-issues">
+                <li>Rejected</li>               
+                 </NavLink>
               </div>
              
            </ol>
@@ -70,14 +76,15 @@ const Sidebar = () => {
                 <li>Staffs</li>
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
-                <span><BiBarChart /></span>
-                <li>General</li>
-              </div>
-              <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><CgProfile /></span>
                 <li>Profile</li>
               </div>
-             
+              <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
+                <span><BiBarChart /></span>
+                <NavLink to="settings">
+                   <li>Settings</li>
+                </NavLink>
+              </div>
            </ol>
         </li>
         {/* Add more menu items */}
