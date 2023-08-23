@@ -8,9 +8,17 @@ import { TiTimesOutline } from "react-icons/ti";
 import { BiMessageRoundedDots, BiBarChart } from "react-icons/bi";
 import { TbNotification } from "react-icons/tb";
 import { BsPeople } from "react-icons/bs";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+  const token = localStorage.getItem('Token')
+  const navigate = useNavigate()
+  const handleLogout = ()=>{
+    console.log(token)
+    localStorage.removeItem('Token');
+    navigate('/login')
+    console.log(token)
+  }
   return (
     <div className="hidden xl:block w-[15%] bg-white fixed h-screen border-r-2 border-slate-200 ">
       <div className="flex items-center p-6">
@@ -84,6 +92,12 @@ const Sidebar = () => {
                 <NavLink to="settings">
                    <li>Settings</li>
                 </NavLink>
+              </div>
+              <div onClick={handleLogout} className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
+                <span><BiBarChart /></span>
+                
+                   <li>Logout</li>
+               
               </div>
            </ol>
         </li>

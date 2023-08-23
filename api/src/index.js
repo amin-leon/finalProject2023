@@ -5,8 +5,9 @@ import {connectDB} from './config/connectMongo'
 import  userRoutes  from './routes/userRoutes'
 import  issueRoutes  from './routes/issueRoutes'
 import  attachmentRoutes from './routes/attachmentRoutes'; // Assuming the attachmentRoutes.js is in the same directory
-
-
+import cors from 'cors';
+// import userController from "./controllers/userController";
+// import validateToken from './middleware/validateTokenHandler';
 
 dotenv.config();
 
@@ -21,12 +22,11 @@ connectDB()
 
 app.use('/uploads', express.static('./uploads'));
 
-
+app.use(cors());
 // Routes
-app.use("/api/users", userRoutes);
+app.use("/api", userRoutes);
 app.use('/api/issues',issueRoutes);
 app.use('/api/attachments', attachmentRoutes);
-
 
 // server is running
 app.listen(port,() => {

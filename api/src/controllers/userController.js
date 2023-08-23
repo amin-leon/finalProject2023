@@ -18,17 +18,18 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Controller for creating a new user with profile picture upload
- const createUser = async (req, res) => {
+ const register = async (req, res) => {
   try {
     const {
-      fullName,
+      firstName,
       email,
       password,
-      role,
-      contactNumber,
-      dateOfBirth,
-      isActive,
-      notificationPreferences,
+      secondName,
+      // role,
+      // contactNumber,
+      // dateOfBirth,
+      // isActive,
+      // notificationPreferences,
     } = req.body;
 
     // Check if the user already exists with the provided email
@@ -42,14 +43,15 @@ const upload = multer({ storage });
 
     // Create a new user with the provided data
     const newUser = new User({
-      fullName,
+      firstName,
       email,
       password: hashedPassword, // Save the hashed password in the database
-      role,
-      contactNumber,
-      dateOfBirth,
-      isActive,
-      notificationPreferences,
+      secondName,
+      // role,
+      // contactNumber,
+      // dateOfBirth,
+      // isActive,
+      // notificationPreferences,
     });
 
     // Save the user to the database
@@ -196,11 +198,11 @@ const upload = multer({ storage });
 };
 
 const currentUser = asyncHandler(async (req, res) => {
-  res.json({Message: "Welcome User", User: req.user});
+  res.json({Message: "Welcome User", User: req.user})
 });
 
 export default{
-  createUser,
+  register,
   uploadProfilePicture,
   updateProfilePictureById,
   getAllUsers,

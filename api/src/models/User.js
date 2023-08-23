@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   
-  fullName: {
+  firstName: {
     type: String,
     required: true,
   },
@@ -17,25 +17,30 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-
-  role: {
+  secondName: {
     type: String,
     required: true,
-    enum: ['leader', 'student'], default: 'student'
   },
 
-  profileImage: {
-    type: String,
+
+  // role: {
+  //   type: String,
+  //   required: true,
+  //   enum: ['leader', 'student'], default: 'student'
+  // },
+
+  // profileImage: {
+  //   type: String,
     
-  },
+  // },
 
-  contactNumber: {
-    type: String,
-  },
+  // contactNumber: {
+  //   type: String,
+  // },
 
-  dateOfBirth: {
-    type: String,
-  },
+  // dateOfBirth: {
+  //   type: String,
+  // },
 
   isActive: {
     type: Boolean,

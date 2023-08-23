@@ -4,7 +4,7 @@ import userController from "../controllers/userController";
 import validateToken from '../middleware/validateTokenHandler';
 
 // User Routes
-router.post('/register', userController.upload.single("profileImage"), userController.createUser); // Create a new user
+router.post('/register', userController.upload.single("profileImage"), userController.register); // Create a new user
 router.get("/all",validateToken, userController.getAllUsers); // Get all users
 router.get("/singleUser/:id", userController.getUserById); // Get a user by ID
 router.put("/userUpdate/:id", userController.updateUserById); // Update a user by ID
