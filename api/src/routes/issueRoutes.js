@@ -3,7 +3,7 @@ const router = express.Router()
 import  issueController from '../controllers/issueController'
 
 
-router.post('/newIssue', issueController.sendIssue);
+router.post('/new-issue', issueController.sendIssue);
 router.delete('/deleteIssue/:id', issueController.deleteIssue);
 router.patch('/working_on_issue/:id', issueController.leaderIsWorkingOnIssue);
 router.get('/singleIssue/:id', issueController.getSingleIssue);// Get individual issue for more check details

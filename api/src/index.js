@@ -39,7 +39,7 @@ import cors from "cors";
 import connection from "../db";
 import userRoutes from "./routes/users";
 import authRoutes from "./routes/auth";
-// import issueRoutes from "./routes/issues.js";
+import issueRoutes from "./routes/issueRoutes";
 
 // Load environment variables from .env
 dotenv.config();
@@ -55,7 +55,7 @@ app.use(cors());
 
 // Routes
 app.use("/api/users", userRoutes);
-// app.use("/api/issues", issueRoutes);
+app.use("/api/issues", issueRoutes);
 app.use("/api/auth", authRoutes);
 
 const port = process.env.PORT || 8081;

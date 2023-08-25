@@ -44,7 +44,7 @@ const Sidebar = () => {
               </div>
               <div className='p-2 flex flex-row items-center space-x-2 text-black  hover:text-[#53B1E7] transition duration-300 cursor-pointer'>
                 <span><GiProgression /></span>
-                <NavLink to="progress-issues" activeClassName="active-link">
+                <NavLink to="progress-issues" >
                   <li>Progess</li>
                 </NavLink>
               </div>

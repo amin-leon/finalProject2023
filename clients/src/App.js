@@ -2,7 +2,7 @@
 // // import Login from './pages/login/index';
 // // import Register from './pages/signup/index';
 // import Home from './pages/Home';
-// // import CreateNewIssue from './components/home_user_page/new_Issue';
+// import CreateNewIssue from './components/home_user_page/new_Issue';
 // import Progress from './components/home_user_page/Progress';
 // import Solved from './components/home_user_page/Solved';
 // import Rejected from './components/home_user_page/Rejected';
@@ -16,13 +16,13 @@
 //           {/* <Route path="/" element ={<Login/>} />
 //           <Route path="/register" element ={<Register/>} /> */}
 //           {/* <Route path="/login" element ={<Login/>} /> */}
-//          <Route path='/user-homepage' element={<Home />}>
-//              {/* <Route path='new-issue' element={<CreateNewIssue />} /> */}
-//              <Route path='progress-issues' element={<Progress />} />
-//              <Route path='solved-issues' element={<Solved />} />
-//              <Route path='rejected-issues' element={<Rejected />} />
-//              <Route path='settings' element={<UserAcountSettings />} />
-//          </Route>
+        //  <Route path='/user-homepage' element={<Home />}>
+        //      {/* <Route path='new-issue' element={<CreateNewIssue />} /> */}
+        //      <Route path='progress-issues' element={<Progress />} />
+        //      <Route path='solved-issues' element={<Solved />} />
+        //      <Route path='rejected-issues' element={<Rejected />} />
+        //      <Route path='settings' element={<UserAcountSettings />} />
+        //  </Route>
         
 //       </Routes>
 
@@ -36,6 +36,9 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Signup from "./components/Singup/index";
 import Login from "./components/Login/index";
 import Home from './pages/Home';
+import NewUserRegistration from './components/home_user_page/NewUserRegistration';
+// import CreateNewIssue from './components/student/CreateNewIssue';
+import CreateNewIssue2 from './components/student/CreateNewIssue2';
 
 const Navigate = useNavigate;
 
@@ -48,10 +51,17 @@ function App() {
 		<Router>
 			<Routes>
 			{user && <Route path="/" exact element={<Login />} />}
-			<Route path="/signup" exact element={<Signup />} />
-			<Route path="/user-home" element ={<Home />} />
-			<Route path="/login" exact element={<Login />} />
-			<Route path="/" element={<Navigate replace to="/login" />} />
+			<Route path="/user-home" element ={<Home />} >
+				<Route path='new-issue' element={<CreateNewIssue2 />} />
+				{/* <Route path='progress-issues' element={<Progress />} />
+				<Route path='solved-issues' element={<Solved />} />
+				<Route path='rejected-issues' element={<Rejected />} />
+				<Route path='settings' element={<UserAcountSettings />} /> */}
+         </Route>
+		 <Route path="/signup" exact element={<Signup />} />
+		 <Route path="/newuser" element ={<NewUserRegistration />} />
+		 <Route path="/login" exact element={<Login />} />
+		<Route path="/" element={<Navigate replace to="/login" />} />
 		</Routes>
 		</Router>
 		

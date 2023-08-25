@@ -24,6 +24,7 @@ export const Login= async (req, res) => {
     const token = user.generateAuthToken(); // Generate token using the user's method
 
     res.status(200).send({ data: token, message: "logged in successfully" });
+    localStorage.setItem("User", user);
   } catch (error) {
     console.error(error);
     res.status(500).send({ message: "Internal Server Error" });
@@ -35,7 +36,7 @@ const validate = (data) => {
     email: Joi.string().email().required().label("Email"),
     password: Joi.string().required().label("Password"),
   });
-  return schema.validate(data);
+  return schema.validate(data)
 };
 
 

@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import Issue from '../models/Issue'
-import User from '../models/User'
+import Issue from './Issue'
 
 
 const commentSchema = new mongoose.Schema({
@@ -11,7 +10,7 @@ const commentSchema = new mongoose.Schema({
     },
     user:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: User,
+        ref: "User",
         required: true
     },
     comment:{

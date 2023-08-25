@@ -1,7 +1,6 @@
 import Issue from '../models/Issue'
 import Notification from '../models/Notification'
 import Comment from '../models/Comment'
-import Attachment from '../models/Attachment'
 
 // Create an issue
 const sendIssue = async(req, res)=>{
